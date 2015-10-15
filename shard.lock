@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  any_bar:
+    github: davydovanton/AnyBar_cr
+    commit: 24a4a37399d0caae365b165ff808368505d6ee8b
+

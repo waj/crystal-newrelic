@@ -1,0 +1,12 @@
+name: newrelic
+version: 0.1.0
+
+authors:
+  - Juan Wajnerman <jwajnerman@manas.com.ar>
+
+dependencies:
+  any_bar:
+    github: davydovanton/AnyBar_cr
+    branch: master
+
+license: MIT
