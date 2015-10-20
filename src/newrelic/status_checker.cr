@@ -5,11 +5,10 @@ class StatusChecker
   def check(key)
     api = NewRelic::Api.new(key)
 
-    puts "Servers"
-    accumulate_result(api.list_servers)
-
-    puts "Applications"
-    accumulate_result(api.list_applications)
+    parallel(
+      accumulate_result(api.list_servers),
+      accumulate_result(api.list_applications)
+    )
   end
 
   private def accumulate_result(objects)

@@ -8,9 +8,9 @@ any_bar.color = "question"
 
 checker = StatusChecker.new
 begin
-  api_keys.each do |key|
-    checker.check(key)
-  end
+  api_keys.map do |key|
+    future { checker.check(key) }
+  end.map &.get
 rescue ex
   any_bar.color = "exclamation"
   raise ex
