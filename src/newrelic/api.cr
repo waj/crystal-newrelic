@@ -22,13 +22,13 @@ class NewRelic::Api
   end
 
   class ServerListResponse
-    json_mapping({
+    JSON.mapping({
       "servers": Array(Server),
     })
   end
 
   class Server
-    json_mapping({
+    JSON.mapping({
       "id":            Int32,
       "name":          String,
       "health_status": String,
@@ -36,13 +36,13 @@ class NewRelic::Api
   end
 
   class ApplicationListResponse
-    json_mapping({
+    JSON.mapping({
       "applications": Array(Application),
     })
   end
 
   class Application
-    json_mapping({
+    JSON.mapping({
       "id":            Int32,
       "name":          String,
       "health_status": String,
