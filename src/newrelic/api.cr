@@ -31,7 +31,7 @@ class NewRelic::Api
     JSON.mapping({
       "id":            Int32,
       "name":          String,
-      "health_status": String,
+      "health_status": {type: String, nilable: true},
     })
   end
 

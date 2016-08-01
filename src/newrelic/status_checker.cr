@@ -16,7 +16,7 @@ class StatusChecker
       case object.health_status
       when "gray", "green"
         next
-      when "orange"
+      when "orange", nil
         @warn = true
       when "red"
         @error = true
