@@ -3,7 +3,7 @@ require "json"
 
 class NewRelic::Api
   def initialize(key)
-    @client = HTTP::Client.new("api.newrelic.com", ssl: true)
+    @client = HTTP::Client.new("api.newrelic.com", tls: true)
     @client.before_request do |request|
       request.headers["X-Api-Key"] = key
     end
